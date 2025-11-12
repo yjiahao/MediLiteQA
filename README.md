@@ -76,10 +76,10 @@ pip install -r requirements.txt
 ## External Links
 The following is a series of relevant links for our project.
 - [Cleaned MedQuAD dataset](https://www.kaggle.com/datasets/bingxuanchia/dsa4213-medquad-processed-dataset)
-- [Fine-tuned model](https://huggingface.co/chiabingxuan/SmolLM2-1.7B-Instruct-MediLite-QA-Rank8-Quantized-LowLR) with LoRA rank = 8, learning rate = 1.0 $\times$ 10<sup>5</sup>
-- [Fine-tuned model](https://huggingface.co/Jiahao123/SmolLM2-1.7B-Instruct-MediLite-QA-Rank8-Quantized-HighLR) with LoRA rank = 8, learning rate = 5.0 $\times$ 10<sup>5</sup>
-- [Fine-tuned model](https://huggingface.co/Jiahao123/SmolLM2-1.7B-Instruct-MediLite-QA-Rank16-Quantized) with LoRA rank = 16, learning rate = 1.0 $\times$ 10<sup>5</sup>
-- [Fine-tuned model](https://huggingface.co/Jiahao123/SmolLM2-1.7B-Instruct-MediLite-QA-Rank16-Quantized-HighLR) with LoRA rank = 16, learning rate = 5.0 $\times$ 10<sup>5</sup>
+- [Fine-tuned model](https://huggingface.co/chiabingxuan/SmolLM2-1.7B-Instruct-MediLite-QA-Rank8-Quantized-LowLR) with LoRA rank = 8, learning rate = 1.0 $\times$ 10<sup>-5</sup>
+- [Fine-tuned model](https://huggingface.co/Jiahao123/SmolLM2-1.7B-Instruct-MediLite-QA-Rank8-Quantized-HighLR) with LoRA rank = 8, learning rate = 5.0 $\times$ 10<sup>-5</sup>
+- [Fine-tuned model](https://huggingface.co/Jiahao123/SmolLM2-1.7B-Instruct-MediLite-QA-Rank16-Quantized) with LoRA rank = 16, learning rate = 1.0 $\times$ 10<sup>-5</sup>
+- [Fine-tuned model](https://huggingface.co/Jiahao123/SmolLM2-1.7B-Instruct-MediLite-QA-Rank16-Quantized-HighLR) with LoRA rank = 16, learning rate = 5.0 $\times$ 10<sup>-5</sup>
 - [GRPO model](https://huggingface.co/Jiahao123/medilite-grpo-v1)
 - [Hugging Face dataset containing model responses for final evaluation](https://huggingface.co/datasets/Cowboygarage/MediLite-QA-Response-Evaluation)
 - [Trackio dashboard 1](https://huggingface.co/spaces/Jiahao123/MediLiteQA) (see `medilite-finetuning` and `medilite-grpo`)
