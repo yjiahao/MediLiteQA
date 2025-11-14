@@ -57,7 +57,7 @@ pip install -r requirements.txt
 ## Fine-Tuning
 1. Upload `finetuning_instruct.ipynb` to Kaggle.
    
-2. Under "Add-ons" > "Secrets", add your Hugging Face access token under the label `"HF_TOKEN"`. Your token should have "write" permissions.
+2. Under "Add-ons" &rarr; "Secrets", add your Hugging Face access token under the label `HF_TOKEN`. Your token should have "write" permissions.
    
 3. Edit `TRACKIO_SPACE_ID` and `TRACKIO_PROJECT` to your liking. These values correspond to the run name and project name respectively, which are to be used in the Trackio dashboard produced.
    
@@ -88,7 +88,7 @@ pip install -r requirements.txt
 ## Response Generation
 1. Upload `response_generation.ipynb` to Kaggle.
    
-2. Under "Add-ons" > "Secrets", add your Hugging Face access token under the label `"HF_TOKEN"`. Your token should have "write" permissions. 
+2. Under "Add-ons" &rarr; "Secrets", add your Hugging Face access token under the label `"HF_TOKEN"`. Your token should have "write" permissions. 
 
 3. Edit `final_model_names` to the names of the models that you wish to generate responses with.
 
@@ -99,9 +99,9 @@ pip install -r requirements.txt
 ## Final Evaluation
 1. Upload `final_evaluation.ipynb` to Kaggle.
    
-2. Under "Add-ons" > "Secrets", add your Hugging Face access token under the label `"HF_TOKEN"`. Your token should have "write" permissions.
+2. Under "Add-ons" &rarr; "Secrets", add your Hugging Face access token under the label `"HF_TOKEN"`. Your token should have "write" permissions.
 
-3. Under "Add-ons" > "Secrets", add your Groq API keys. In the code, do also edit `groq_token_keys` so that it tallies with the labels to which the API keys are saved.
+3. Under "Add-ons" &rarr; "Secrets", add your Groq API keys. In the code, do also edit `groq_token_keys` so that it tallies with the labels to which the API keys are saved.
 
 4. Edit `DATASET_PATH` so that it matches the Hugging Face repository which the generated responses are saved in.
 
