@@ -55,7 +55,7 @@ pip install -r requirements.txt
 4. Run `grpo_split.ipynb` to obtain a subset of the training split, for the GRPO process. After this is complete, the GRPO training set should be saved at `./data/processed/grpo_train.csv`.
 
 ## Fine-Tuning
-1. Upload `finetuning-instruct.ipynb` to Kaggle.
+1. Upload `finetuning_instruct.ipynb` to Kaggle.
    
 2. Under "Add-ons" > "Secrets", add your Hugging Face access token under the label `"HF_TOKEN"`. Your token should have "write" permissions.
    
@@ -70,8 +70,28 @@ pip install -r requirements.txt
 ## GRPO Training
 
 ## Response Generation
+1. Upload `response_generation.ipynb` to Kaggle.
+   
+2. Under "Add-ons" > "Secrets", add your Hugging Face access token under the label `"HF_TOKEN"`. Your token should have "write" permissions. 
+
+3. Edit `final_model_names` to the names of the models that you wish to generate responses with.
+
+4. Edit `HF_REPO_ID` to the Hugging Face repository that you wish to store the generated responses in.
+
+5. Run the pipeline to carry out response generation on the testing set. The responses will be saved as a Hugging Face dataset, at `https://huggingface.co/datasets/<HF_REPO_ID>`.
 
 ## Final Evaluation
+1. Upload `final_evaluation.ipynb` to Kaggle.
+   
+2. Under "Add-ons" > "Secrets", add your Hugging Face access token under the label `"HF_TOKEN"`. Your token should have "write" permissions.
+
+3. Under "Add-ons" > "Secrets", add your Groq API keys. In the code, do also edit `groq_token_keys` so that it tallies with the labels to which the API keys are saved.
+
+4. Edit `DATASET_PATH` so that it matches the Hugging Face repository which the generated responses are saved in.
+
+5. In the last cell, edit `model_names` so that they reflect the column names of the dataset, corresponding to the names of the models that are to be evaluated.
+
+6. Run the pipeline to evaluate the performance of the chosen models. Two metrics will be produced - the BLEU score and the LLM-as-a-judge score.
 
 ## External Links
 The following is a series of relevant links for our project.
