@@ -68,6 +68,22 @@ pip install -r requirements.txt
 6. Run the pipeline to fine-tune your chosen model. The training metrics will be tracked in a Trackio dashboard, which can be found at `https://huggingface.co/spaces/<TRACKIO_SPACE_ID>`. The resultant model will be saved at `https://huggingface.co/<HF_REPO_ID>`. The last cell evaluates the performance of the fine-tuned model on the testing set.
 
 ## GRPO Training
+1. Sign up for a Modal account at: https://modal.com/signup
+
+2. Follow this [guide](https://modal.com/docs/guide/secrets#deploy-secrets-from-the-modal-dashboard) to create a Modal secret with name `HF_TOKEN`, key `HF_TOKEN` and value as your HuggingFace token.
+    - The easiest way is to use the Secrets panel of the Modal dashboard (see the linked guide).
+
+3. Edit the following constants in `grpo_train.py`:
+    - Change `HF_USER` to your own HuggingFace username.
+    - Change `HF_REPO_ID` to the HuggingFace repository you want to push the trained GRPO model to.
+    - Change `INITIAL_FINETUNED_MODEL_REPO` to your own model repository with the best finetuning performance, or you may leave it with the default value.
+    - Change `TRACK_IO_RUN_NAME` to your desired run name on Trackio.
+    - Change `TRACK_IO_SPACE_ID` to your desired Trackio space.
+    - Change `TRACK_IO_PROJECT` to your desired Trackio project.
+
+4. Assuming you are in root, run the following command to start training on modal: `modal run -d src/grpo-train.py`.
+
+5. You may exit the terminal using `CTRL + C` and view your current run and logs in Modal under `Apps` in the browser.
 
 ## Response Generation
 1. Upload `response_generation.ipynb` to Kaggle.
